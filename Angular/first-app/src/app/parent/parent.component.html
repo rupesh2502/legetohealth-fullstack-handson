@@ -1,0 +1,12 @@
+<div>
+    <h2>ParentComponent {{firstName}}</h2> 
+     <h3>Total No of Clicks {{clicks}}</h3>
+     <hr/>
+<!-- <div>
+<app-child [userName] = 'firstName'></app-child>
+</div> -->
+<h2>Iterating the users</h2>
+<div *ngFor = 'let u of users'>
+    <app-child [userName] = 'u' (eventCounter)= "numberOfClicks($event)"></app-child>
+</div>
+</div>

@@ -1,0 +1,9 @@
+<div>
+    <h3>Data Binding Demo</h3>
+    <h4>Eventing Binding UserName :: {{userName}}</h4>
+    <input type="text" autocomplete="off" #un/>
+    <div [hidden] = toggleButton> Show Message </div>
+    <button (click) = "handleClick(un.value)">MyButton</button>
+    <div>Toggle Button : {{toggleButton}}</div>
+    <button [disabled] = toggleButton>MyButton1</button>
+</div>

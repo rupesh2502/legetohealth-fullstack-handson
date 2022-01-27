@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DataBindComponent } from './data-bind/data-bind.component';
+import { GenderPipe } from './gender.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DataBindComponent
+    DataBindComponent,
+    GenderPipe
   ],
   imports: [
     BrowserModule,

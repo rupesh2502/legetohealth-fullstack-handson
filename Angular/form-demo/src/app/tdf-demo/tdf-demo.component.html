@@ -1,0 +1,23 @@
+<div>
+    <h2>TDF Form</h2>
+    <form #simpleForm="ngForm" (ngSubmit)="handleSubmit(simpleForm.value)">
+        <div>
+            UserName<input type="text" autocomplete="off" name="un" #un="ngModel" ngModel required>
+            <span class="text-danger" [hidden] = 'un.valid || un.pristine'>UserName is Mandatory</span>
+        </div>
+        <div>
+            Password<input type="text" name="pwd" #pwd="ngModel" ngModel required>
+            <span class="text-danger" [hidden] = 'pwd.valid || pwd.pristine'>Password is Mandatory</span>
+        </div>
+        <div>
+            <input type="submit" value="Login" [disabled] = 'simpleForm.invalid'>
+        </div>
+    </form>
+    <div>
+        <h2>Simple Form</h2>
+        <p>{{simpleForm.value | json}}</p>
+        <p>Form is valid : {{simpleForm.valid}}, invalid : {{simpleForm.invalid}}</p>
+        <p>UserName is valid : {{un.valid}}, Pristine : {{un.pristine}}</p>
+        <p>Password is valid : {{pwd.valid}}, Pristine : {{pwd.pristine}}</p>
+    </div>
+</div>

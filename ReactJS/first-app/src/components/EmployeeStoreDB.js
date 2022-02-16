@@ -17,7 +17,8 @@ class EmployeeStore extends Component{
             event.preventDefault();
             let url = "http://localhost:9090/employees";
             var data = {'_id' : this.state._id , 'name' : this.state.name , 'salary' : this.state.salary}
-            axios.post(url, JSON.stringify(this.state)).then(response => console.log(response)).catch(err=>console.log(err));
+            console.log("Data is "+data._id);
+            axios.post(url, JSON.stringify(data)).then(response => console.log(response)).catch(err=>console.log(err));
          }
          return (
             <form onSubmit={handleSubmit}>

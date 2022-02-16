@@ -1,0 +1,13 @@
+server:
+ port: 8888
+ 
+ 
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/rupesh2502/git-cloud-configuration.git
+          username: rupesh2502
+          password: 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
+          default-label: master
